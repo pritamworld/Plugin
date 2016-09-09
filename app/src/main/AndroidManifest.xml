@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="aidl.adesa.priteshpatel.plugin">
+
+    <application android:label="@string/app_name">
+        <service
+            android:name=".PluginService1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidsrc.intent.action.PICK_PLUGIN" />
+
+                <category android:name="androidsrc.intent.category.ADD_PLUGIN" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".PluginService2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidsrc.intent.action.PICK_PLUGIN" />
+
+                <category android:name="androidsrc.intent.category.MUL_PLUGIN" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".SubPluginService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidsrc.intent.action.PICK_PLUGIN" />
+
+                <category android:name="androidsrc.intent.category.SUB_PLUGIN" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ProductService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidsrc.intent.action.PICK_PLUGIN" />
+                <category android:name="androidsrc.intent.category.PRODUCT_PLUGIN" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
